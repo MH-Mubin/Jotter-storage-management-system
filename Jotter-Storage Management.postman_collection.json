@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "99e478c1-bd5a-436f-8644-28b507863b4f",
+		"name": "Jotter-Storage Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37808311",
+		"_collection_link": "https://testing-9433.postman.co/workspace/MERN-practice~dd1001a5-bd77-489f-a1e2-7524af48aa2c/collection/37808311-99e478c1-bd5a-436f-8644-28b507863b4f?action=share&source=collection_link&creator=37808311"
+	},
+	"item": [
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "aboutUs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{Base URL}}/aboutUs",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"aboutUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "privacyPolicy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{Base URL}}/privacyPolicy",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"privacyPolicy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "termsAndConditions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{Base URL}}/termsAndConditions",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"termsAndConditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentPassword\": \"abcd-1234\",\r\n  \"newPassword\": \"abc-123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/changePassword",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/deleteAccount",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"mubin\",\r\n    \"email\":\"mubin.cbs@gmail.com\",\r\n    \"password\": \"abc-123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/registration",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mubin.cbs@gmail.com\",\r\n    \"password\": \"abc-123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/login",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profileUpdate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"photo\": \"https://th.bing.com/th/id/OIP.ss-ufLaG299GXETlkhAdbgHaFP?w=245&h=180&c=7&r=0&o=5&pid=1.7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/profileUpdate",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"profileUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recoverVerifyEmail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/recoverVerifyEmail/mubin.cbs@gmail.com",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"recoverVerifyEmail",
+								"mubin.cbs@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recoverVerifyOTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/recoverVerifyOTP/mubin.cbs@gmail.com/503946",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"recoverVerifyOTP",
+								"mubin.cbs@gmail.com",
+								"503946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"abcd-1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/resetPassword/mubin.cbs@gmail.com/503946",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"resetPassword",
+								"mubin.cbs@gmail.com",
+								"503946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profileDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mubin.cbs@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/profileDetails",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"profileDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base URL}}/logout",
+							"host": [
+								"{{Base URL}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base URL",
+			"value": "http://localhost:4000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDgzNjQzMjEsImRhdGEiOnsidXNlck5hbWUiOiJtdWJpbiIsImVtYWlsIjoibXViaW4uY2JzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYWJjLTEyMyJ9LCJpYXQiOjE3NDgyNzc5MjF9.hF3qN2rAaJcy-foxk1EWtNLvWl5eCMHG7GC1ycDtEAs",
+			"type": "string"
+		}
+	]
+}

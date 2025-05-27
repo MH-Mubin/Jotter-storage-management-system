@@ -6,5 +6,3 @@ const createToken = async (data) => {
     };
 
     module.exports = createToken;
-
-    // + (60 * 60 * 24)
